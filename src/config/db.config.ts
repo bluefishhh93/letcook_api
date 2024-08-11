@@ -30,9 +30,7 @@ import { Favorite } from "@/entity/favourite.entity";
 // import env from '@/util/validateEnv';
 const MongoDataSource = new DataSource({
   type: "mongodb",
-  host: env.MONGO_HOST,
-  port: env.MONGO_PORT,
-  database: env.MONGO_DB,
+  url: `mongodb+srv://${env.MONGO_USER}:${env.MONGO_PASS}@${env.MONGO_HOST}/${env.MONGO_DB}?retryWrites=true&w=majority`,
   // useUnifiedTopology: true,
   // useNewUrlParser: true,
 

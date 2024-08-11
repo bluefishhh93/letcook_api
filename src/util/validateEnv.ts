@@ -6,6 +6,8 @@ export default cleanEnv(process.env, {
   CLIENT_URL: str(),
   MONGO_HOST: str(),
   MONGO_PORT: port(),
+  MONGO_USER: str(),
+  MONGO_PASS: str(),
   MONGO_DB: str(),
   POSTGRES_HOST: str(),
   POSTGRES_PORT: port(),
