@@ -31,6 +31,7 @@ import { Favorite } from "@/entity/favourite.entity";
 const MongoDataSource = new DataSource({
   type: "mongodb",
   url: `mongodb+srv://${env.MONGO_USER}:${env.MONGO_PASS}@${env.MONGO_HOST}/${env.MONGO_DB}?retryWrites=true&w=majority`,
+  ssl: true,
   // useUnifiedTopology: true,
   // useNewUrlParser: true,
 
