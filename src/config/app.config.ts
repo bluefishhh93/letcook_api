@@ -44,5 +44,10 @@ routers.forEach(({ path, router }) => {
   app.use(path, router);
 });
 
+//return helloworld
+app.use("/api/hello", (req, res) => {
+  res.send("Hello World");
+});
+
 
 export default app;
