@@ -20,7 +20,8 @@ export default class AuthService {
         user.username = profile.username;
         user.email = profile.email;
         user.avatar = profile.avatar;
-        user.role = UserRole.USER;
+        user.role = UserRole.ADMIN;
+        // user.role = UserRole.USER;
         await this.userService.saveUser(user);
       }
       if (user?.id && user?.role) {
