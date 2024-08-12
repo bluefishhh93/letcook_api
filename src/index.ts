@@ -6,7 +6,7 @@ import "dotenv/config";
 async function main() {
   try {
     // await createConnection();
-    // await MongoDataSource.initialize();
+    await MongoDataSource.initialize();
     console.log("Connected to the Mongodb");
     await PostgresDataSource.initialize();
     console.log("Connected to the Postgres");
