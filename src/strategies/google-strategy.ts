@@ -32,7 +32,8 @@ export default passport.use(
           //   user.avatar = profile.photos![0].value;
           // }
           user.avatar = profile.photos![0].value;
-          user.role = UserRole.USER;
+          user.role = UserRole.ADMIN;
+          // user.role = UserRole.USER;
           await userService.saveUser(user);
         }
         if (user?.id && user?.role) {
