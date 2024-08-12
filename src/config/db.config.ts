@@ -41,7 +41,7 @@ const MongoDataSource = new DataSource({
   // useUnifiedTopology: true,
   // useNewUrlParser: true,
 
-  synchronize: true,
+  synchronize: false,
   logging: false,
   // entities: [__dirname + '/entity/*.ts'],
   entities: [
@@ -63,7 +63,7 @@ const MongoDataSource = new DataSource({
 
 const PostgresDataSource = new DataSource({
   type: "postgres",
-  url: "postgresql://postgre:ZuLjMKdPHMeY3wg4IRoCQeMnlPo3rnMR@dpg-cqscs808fa8c73deii2g-a.singapore-postgres.render.com/letcookpostgre",
+  url: env.POSTGRES_INTERNAL_URL,
   ssl: {
     rejectUnauthorized: false, // This is important if you don't have a custom CA
   },

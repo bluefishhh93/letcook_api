@@ -14,6 +14,8 @@ export default cleanEnv(process.env, {
   POSTGRES_USERNAME: str(),
   POSTGRES_PASSWORD: str(),
   POSTGRES_DB: str(),
+  POSTGRES_EXTERNAL_URL: str(),
+  POSTGRES_INTERNAL_URL: str(),
   // JWT_SECRET: str(),
   // SESSION_SECRET: str(),
   DISCORD_CLIENT_ID: str(),
