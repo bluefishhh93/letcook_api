@@ -63,12 +63,10 @@ const MongoDataSource = new DataSource({
 
 const PostgresDataSource = new DataSource({
   type: "postgres",
-  host: env.POSTGRES_HOST,
-  port: env.POSTGRES_PORT,
-  username: env.POSTGRES_USERNAME,
-  password: env.POSTGRES_PASSWORD,
-  database: env.POSTGRES_DB,
-
+  url: "postgresql://postgre:ZuLjMKdPHMeY3wg4IRoCQeMnlPo3rnMR@dpg-cqscs808fa8c73deii2g-a.singapore-postgres.render.com/letcookpostgre",
+  ssl: {
+    rejectUnauthorized: false, // This is important if you don't have a custom CA
+  },
   synchronize: false,
   logging: false,
   entities: [
