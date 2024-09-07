@@ -64,10 +64,10 @@ const MongoDataSource = new DataSource({
 const PostgresDataSource = new DataSource({
   type: "postgres",
   url: env.POSTGRES_EXTERNAL_URL,
-  ssl: {
-    rejectUnauthorized: false, // This is important if you don't have a custom CA
-  },
-  synchronize: false,
+  // ssl: {
+  //   rejectUnauthorized: false, // This is important if you don't have a custom CA
+  // },
+  synchronize: true,
   logging: false,
   entities: [
     User,

@@ -7,7 +7,7 @@ async function main() {
   try {
     // await createConnection();
     await MongoDataSource.initialize();
-    console.log("Connected to the Mongodb");
+    // console.log("Connected to the Mongodb");
     await PostgresDataSource.initialize();
     console.log("Connected to the Postgres");
     server.listen(env.PORT, () =>
